@@ -1,0 +1,13 @@
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: backend
+    container_name: backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - DB_HOST=host.docker.internal
+    ports:
+      - "3000:3000"
