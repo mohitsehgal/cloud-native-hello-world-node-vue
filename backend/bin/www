@@ -6,7 +6,6 @@
 
 const app = require('../app');
 require('dotenv').config()
-console.log(process.env) 
 const debug = require('debug')('backend:server');
 const http = require('http');
 
